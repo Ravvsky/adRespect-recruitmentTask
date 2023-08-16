@@ -1,8 +1,13 @@
-const appendComponentOnElement = async (name: string): Promise<void> => {
+const appendComponentOnElement = async (
+  name: string,
+  path: string
+): Promise<void> => {
   if (!name) return;
 
   try {
-    const response = await fetch(`./components/${name}/index.html`);
+    const response = await fetch(
+      path ? path : `./components/${name}/index.html`
+    );
     const htmlText = await response.text();
 
     if (!htmlText) {
