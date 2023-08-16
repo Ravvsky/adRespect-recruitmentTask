@@ -1,6 +1,6 @@
 const appendComponentOnElement = async (
   name: string,
-  path: string
+  path?: string
 ): Promise<void> => {
   if (!name) return;
 
