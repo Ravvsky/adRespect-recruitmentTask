@@ -1,0 +1,31 @@
+{
+    "megaMenuContent":[
+        {
+          "title": "Projektowanie ogrodów",
+          "content": [
+            "Indywidualne koncepcje krajobrazowe dostosowane do Twoich potrzeb",
+            "Optymalne wykorzystanie dostępnej przestrzeni, niezależnie od rozmiaru ogrodu.",
+            "Sezonowe rozwiązania, aby Twój ogród zachwycał przez cały rok"
+          ]
+        },
+        {
+          "title": "Projektowanie ogrodów",
+          "content": [
+            "Profesjonalna realizacja przez doświadczonych ogrodników i techników krajobrazu",
+            "Wybór roślin odpowiednich do klimatu i gleby Twojego regionu",
+            "Estetyczne elementy hardscapingowe, integrujące się z projektem ogrodu."
+          ]
+        },
+        {
+          "title": "Wizualizacja",
+          "content": "<div class=\"flex-1\"><img class=\"h-full object-cover\" src=\"../src/assets/images/garden-image-1.webp\" alt=\"pool image\"/></div><div class=\"flex-1\"><img class=\"h-full object-cover\" src=\"../src/assets/images/garden-image-2.webp\" alt=\"garden image\"/></div>"
+        }
+      ],
+      
+    "navItems":[
+      { "name": "Oferta", "items": ["Oferta1", "Oferta2"] },
+      "O firmie",
+      "Realizacje",
+      "Kontakt"
+    ]
+    }
