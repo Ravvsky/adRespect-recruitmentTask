@@ -5,13 +5,14 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
-    "baseUrl": "./", // Set the baseUrl to the root directory
+    "baseUrl": "./",
     "paths": {
       "*": [
         "src/*"
-      ] // Map all module names to the "src" directory
+      ] 
     },
     "moduleResolution": "node",
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*.ts"

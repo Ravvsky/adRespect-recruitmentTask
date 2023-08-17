@@ -1,8 +1,21 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: ['./src/**/*.{html,js}'],
+  content: ['./src/**/*.{html,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      container: {
+        center: true,
+        screens: {
+          '2xl': '1440px',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        second: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 };
