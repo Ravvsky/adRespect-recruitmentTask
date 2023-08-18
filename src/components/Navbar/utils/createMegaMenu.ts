@@ -8,7 +8,7 @@ const createMegaMenu = (
   const containerElement = document.querySelector(containerElementSelector);
   const newMegaMenuDiv = document.createElement('div');
   newMegaMenuDiv.className =
-    'absolute w-full grid grid-cols-12 gap-[2rem] left-1/2 p-[2rem] -translate-x-1/2 container bg-white top-[-100%] transition-all z-[-1] duration-600';
+    'absolute w-full grid grid-cols-12 gap-[2rem] left-1/2 p-[2rem] -translate-x-1/2 container bg-white top-[-100%] transition-all z-[1] duration-600';
   containerElement?.appendChild(newMegaMenuDiv);
 
   function generateMegaMenuContent(item: MegaMenuItem) {
