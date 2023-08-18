@@ -51,6 +51,9 @@ const appendComponentOnElement = async (
           const attr = originalAttributes[i];
           clonedComponent.setAttribute(attr.name, attr.value);
         }
+        while (targetElement.firstChild) {
+          clonedComponent.appendChild(targetElement.firstChild);
+        }
 
         parentElement.replaceChild(clonedComponent, targetElement);
       }
