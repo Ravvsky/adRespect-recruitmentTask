@@ -15,12 +15,12 @@ const appendComponentOnElement = async (
       return;
     }
 
-    const targetElement: HTMLElement | null = document.querySelector(
+    const targetElements: NodeList = document.querySelectorAll(
       `[data-componentName="${name}"]`
     );
 
-    if (!targetElement) {
-      console.error(`Element with [data-componentName="${name}"] not found`);
+    if (targetElements.length === 0) {
+      console.error(`Elements with [data-componentName="${name}"] not found`);
       return;
     }
 
@@ -36,8 +36,17 @@ const appendComponentOnElement = async (
       0
     ) as HTMLElement;
 
-    newComponent.setAttribute('data-componentName', name);
-    targetElement?.replaceWith(newComponent);
+    const originalAttributes = (targetElements[0] as Element).attributes;
+    for (let i = 0; i < originalAttributes.length; i++) {
+      const attr = originalAttributes[i];
+      newComponent.setAttribute(attr.name, attr.value);
+    }
+    targetElements.forEach((targetElement) => {
+      const parentElement = targetElement.parentElement;
+      if (parentElement) {
+        parentElement.replaceChild(newComponent.cloneNode(true), targetElement);
+      }
+    });
 
     const scripts = newComponent.querySelectorAll('script');
     const scriptPromises: Promise<void>[] = [];
