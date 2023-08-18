@@ -44,7 +44,15 @@ const appendComponentOnElement = async (
     targetElements.forEach((targetElement) => {
       const parentElement = targetElement.parentElement;
       if (parentElement) {
-        parentElement.replaceChild(newComponent.cloneNode(true), targetElement);
+        const clonedComponent = newComponent.cloneNode(true) as HTMLElement;
+
+        const originalAttributes = (targetElement as Element).attributes;
+        for (let i = 0; i < originalAttributes.length; i++) {
+          const attr = originalAttributes[i];
+          clonedComponent.setAttribute(attr.name, attr.value);
+        }
+
+        parentElement.replaceChild(clonedComponent, targetElement);
       }
     });
 
