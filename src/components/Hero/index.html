@@ -1,0 +1,156 @@
+<div class="relative bg-beige">
+  <div class="container flex">
+    <div class="w-1/2 pr-[6.4rem] h-[73.7rem]" id="leftSliderWrapper">
+      <section
+        id="left-carousel"
+        class="splide relative h-full py-[2rem] md:py-0 w-min 2xl:ml-auto md:ml-[5rem] ml-[2rem]"
+        aria-label="Beautiful Images"
+      >
+        <div class="splide__track h-full ml-auto">
+          <ul class="splide__list">
+            <li class="splide__slide flex items-center">
+              <div class="flex flex-col gap-[7.2rem]">
+                <div
+                  class="flex flex-col gap-[2rem] lg:gap-[4.4rem] md:w-min lg:w-auto max-w-[32rem] sm:max-w-[60rem]"
+                >
+                  <span
+                    class="font-second font-medium text-[3.5rem] xl:text-[6rem] leading-[4rem] xl:leading-[7rem] text-black"
+                    >Nowoczesna aranżacja
+                    <span class="whitespace-nowrap">Twojego ogrodu</span>
+                  </span>
+                  <span>
+                    Marka GiardDesign to wieloletnie doświadczenie i wysoka<br />
+                    estetyka realizacji. Oferujemy kompleksowy zakres usług<br />z
+                    indywidualnym podejściem do każdego projektu.
+                  </span>
+
+                  <div
+                    class="flex flex-col xl:flex-row w-fit gap-[1rem] lg:gap-[2.5rem] xl:gap-[5rem]"
+                    id="buttonsWrapper"
+                  >
+                    <button
+                      id="2"
+                      data-componentName="Button"
+                      data-variant="main"
+                    >
+                      Skontaktuj się z nami</button
+                    ><button
+                      data-componentName="Button"
+                      id="1"
+                      data-variant="secondary"
+                      class="flex gap-[0.8rem] justify-center items-center"
+                    >
+                      Zobacz nasze realizacje
+                      <object
+                        class="pointer-events-none h-min w-min"
+                        data="../src/assets/icons/button-arrow-down-icon.svg"
+                        type="image/svg+xml"
+                        aria-label="close icon"
+                        role="img"
+                      ></object>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="splide__slide flex items-center">
+              <div
+                class="flex flex-col xl:flex-row w-fit gap-[2.5rem] xl:gap-[5rem]"
+                id="buttonsWrapper"
+              >
+                <div class="flex flex-col gap-[4.4rem] max-w-[60rem]">
+                  <span
+                    class="font-second font-medium text-[6rem] leading-[7rem] text-black"
+                    >Minimalistyczne Piękno Ogrodu
+                  </span>
+                  <span>
+                    Marka GiardDesign to wieloletnie doświadczenie i wysoka<br />
+                    estetyka realizacji. Oferujemy kompleksowy zakres usług<br />z
+                    indywidualnym podejściem do każdego projektu.
+                  </span>
+
+                  <div class="flex gap-[5rem]" id="buttonsWrapper">
+                    <button
+                      id="2"
+                      data-componentName="Button"
+                      data-variant="main"
+                    >
+                      Skontaktuj się z nami</button
+                    ><button
+                      data-componentName="Button"
+                      id="1"
+                      data-variant="secondary"
+                      class="flex gap-[0.8rem] justify-center items-center"
+                    >
+                      Zobacz nasze realizacje
+                      <object
+                        class="pointer-events-none h-min w-min"
+                        data="../src/assets/icons/button-arrow-down-icon.svg"
+                        type="image/svg+xml"
+                        aria-label="close icon"
+                        role="img"
+                      ></object>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="hidden md:block absolute w-1/2 right-0">
+      <section
+        id="image-carousel"
+        class="splide relative"
+        aria-label="Beautiful Images"
+      >
+        <div class="splide__arrows absolute right-0 bottom-0 z-10 flex">
+          <button
+            class="splide__arrow--prev bg-[#F5F0EC] py-[2.4rem] px-[3.2rem]"
+          >
+            <object
+              class="pointer-events-none h-min w-min"
+              data="../src/assets/icons/slider-left-arrow-icon.svg"
+              type="image/svg+xml"
+              aria-label="close icon"
+              role="img"
+            ></object>
+          </button>
+          <button
+            class="splide__arrow--next bg-[#F5F0EC] py-[2.4rem] px-[3.2rem]"
+          >
+            <object
+              class="pointer-events-none h-min w-min"
+              data="../src/assets/icons/slider-right-arrow-icon.svg"
+              type="image/svg+xml"
+              aria-label="close icon"
+              role="img"
+            ></object>
+          </button>
+        </div>
+
+        <div class="splide__track">
+          <ul class="splide__list max-h-[73.7rem]">
+            <li class="splide__slide">
+              <img
+                class="w-full object-cover"
+                src="../../../src/assets/images/garden-image-3.webp"
+                alt=""
+              />
+            </li>
+            <li class="splide__slide">
+              <img
+                class="w-full object-cover"
+                src="../../../src/assets/images/garden-image-3.webp"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="../../../dist/components/Hero/index.js"></script>
+</div>
