@@ -15,6 +15,12 @@ module.exports = {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         second: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        black: '#111',
+        beige: '#DCC1AB',
+        green: '#1B5B31',
+        gray: '#F5F0EC',
+      },
     },
   },
   plugins: [],
