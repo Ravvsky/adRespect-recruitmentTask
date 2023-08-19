@@ -22,4 +22,13 @@ buttons.forEach((button) => {
       'hover:bg-white/40'
     );
   }
+
+  if (
+    button.getAttribute('data-color') === 'white' &&
+    button.getAttribute('data-variant') === 'secondary'
+  ) {
+    button.classList.replace('border-green', 'border-gray');
+    button.classList.replace('text-green', 'text-gray');
+    button.classList.replace('hover:bg-white/40', 'hover:bg-black/20');
+  }
 });
