@@ -38,21 +38,23 @@ cards.forEach((card) => {
   topDiv.appendChild(icon);
   topDiv.appendChild(textsDiv);
 
-  const buttonIcon = document.createElement('object');
-  buttonIcon.setAttribute(
-    'data',
-    `../src/assets/icons/button-arrow-right-icon.svg`
-  );
-  buttonIcon.setAttribute('type', 'image/svg+xml');
-  buttonIcon.setAttribute('aria-label', `right arrow icon`);
-  buttonIcon.setAttribute('role', 'img');
-  buttonIcon.classList.add('w-min', 'h-min');
-
   const button = document.createElement('button');
   button.setAttribute('type', 'button');
   button.innerHTML = card.buttonText;
-  button.appendChild(buttonIcon);
   button.classList.add(...buttonClasses.split(' '));
+
+  const svgContainer = document.createElement('div');
+  svgContainer.classList.add('w-min', 'h-min', 'fill-green');
+
+  fetch('../src/assets/icons/button-arrow-right-icon.svg')
+    .then((response) => response.text())
+    .then((svg) => {
+      svgContainer.insertAdjacentHTML('afterbegin', svg);
+      button.appendChild(svgContainer);
+    });
+
+  button.setAttribute('aria-label', `right arrow icon`);
+  button.setAttribute('role', 'img');
 
   newCard.appendChild(topDiv);
   newCard.appendChild(button);
