@@ -31,4 +31,13 @@ buttons.forEach((button) => {
     button.classList.replace('text-green', 'text-gray');
     button.classList.replace('hover:bg-white/40', 'hover:bg-black/20');
   }
+
+  if (
+    button.getAttribute('data-color') === 'black' &&
+    button.getAttribute('data-variant') === 'secondary'
+  ) {
+    button.classList.replace('border-green', 'border-black');
+    button.classList.replace('text-green', 'text-black');
+    button.classList.replace('hover:bg-white/40', 'hover:bg-black/10');
+  }
 });
