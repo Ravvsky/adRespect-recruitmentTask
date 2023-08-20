@@ -11,8 +11,8 @@ const masonryWrapper = document.querySelector(
 
 const imageElements: HTMLImageElement[] = [];
 
-Images.forEach((image) => {
-  const imageElement = createImageElement(image);
+Images.forEach((image, index) => {
+  const imageElement = createImageElement(image, index);
 
   imageElements.push(imageElement);
   masonryWrapper?.appendChild(imageElement);
@@ -26,6 +26,7 @@ let isFullContentVisible = false;
 
 const component = document.querySelector('[data-componentname="Realizations"]');
 const svgContainer = component && component.querySelector('#svgContainer');
+let lastIndex = Images.length - 1;
 
 const toggleShowMoreContent = (showMoreButton: Element) => {
   const buttonText = showMoreButton.querySelector('.button-text');
@@ -34,9 +35,11 @@ const toggleShowMoreContent = (showMoreButton: Element) => {
   }
 
   if (!isFullContentVisible) {
+    const newStartingIndex = lastIndex + 1;
+
     toggleClassNames(showMoreButton, ['bg-white', 'hover:bg-white/50'], 'ADD');
-    Images.forEach((image) => {
-      const imageElement = createImageElement(image);
+    Images.forEach((image, index) => {
+      const imageElement = createImageElement(image, newStartingIndex + index);
       imageElements.push(imageElement);
       masonryWrapper?.appendChild(imageElement);
       component && component.classList.remove('before:z-[10]');
