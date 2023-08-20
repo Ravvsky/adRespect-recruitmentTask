@@ -30,6 +30,14 @@ childrenElements &&
     }
   });
 
+const svgContainers = document.querySelectorAll('.svgContainer');
+svgContainers.forEach((svgContainer) => {
+  svgContainer?.classList.add('fill-green');
+  fetch('../src/assets/icons/button-arrow-down-icon.svg')
+    .then((response) => response.text())
+    .then((svg) => svgContainer.insertAdjacentHTML('afterbegin', svg));
+});
+
 const heroComponent = document.querySelector(
   '[data-componentName="Hero"]'
 ) as HTMLElement;

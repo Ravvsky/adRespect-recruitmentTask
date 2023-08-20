@@ -1,0 +1,27 @@
+<section
+  class="bg-beige pt-[12rem] pb-[4.4rem] flex flex-col gap-[9.6rem] relative before:absolute before:w-full before:h-[100rem] before:bg-gradient-to-t before:from-beige to-transparent before:z-[10] before:bottom-0"
+>
+  <div class="flex flex-col container gap-[1.6rem]">
+    <span class="text-green text-[1.2rem] leading-[150%] tracking-[-0.16px]"
+      >Realizacje</span
+    >
+    <span class="leading-[115%] text-[4.8rem] tracking-[-1.44px] font-medium"
+      >Nasze <span class="tracking-normal italic">projekty</span></span
+    >
+  </div>
+  <div id="masonry-wrapper" class="container relative"></div>
+
+  <button
+    data-componentName="Button"
+    data-variant="secondary"
+    data-color="black"
+    class="absolute bottom-[14.2rem] left-1/2 z-10 -translate-x-1/2 flex gap-[0.8rem] justify-center items-center w-fit hover:gap-[1.4rem]"
+  >
+    <span class="button-text">Rozwiń</span>
+    <div id="svgContainer" class="pointer-events-none h-min w-min"></div>
+  </button>
+  <script
+    type="module"
+    src="../../../dist/components/Realizations/index.js"
+  ></script>
+</section>
