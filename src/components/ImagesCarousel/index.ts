@@ -4,7 +4,7 @@ import Splide from '@splidejs/splide';
 let contentSlider: Splide | null = null;
 
 function initializeSlider() {
-  contentSlider = new Splide('#left-carousel', {
+  contentSlider = new Splide('#masonary-carousel', {
     pagination: false,
   });
 
