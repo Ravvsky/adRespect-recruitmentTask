@@ -14,13 +14,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray('.text-animate').forEach((textElement) => {
   gsap.from(textElement, {
-    x: '100%', // Slide from right
+    x: '100%',
     opacity: 0,
     duration: 1,
     ease: 'power3.out',
     scrollTrigger: {
       trigger: textElement,
-      start: 'top 80%', // Adjust the start position as needed
+      start: 'top 80%',
     },
   });
 });
