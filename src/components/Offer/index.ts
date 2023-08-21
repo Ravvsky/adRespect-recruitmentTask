@@ -1,4 +1,8 @@
 import { cards } from './DUMMY_DATA.json';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { CustomEase } from 'gsap/CustomEase';
+
 const cardsWrapper = document.getElementById('cardsWrapper');
 const cardClasses =
   'bg-white px-[2rem] py-[2.4rem] 2xl:px-[4rem] 2xl:py-[4.8rem] w-full md:w-auto flex flex-col rounded-[2.8rem] justify-between h-[37rem] group transition-all hover:scale-[1.1] hover:shadow-lg';
@@ -59,5 +63,30 @@ cards.forEach((card) => {
   newCard.appendChild(topDiv);
   newCard.appendChild(button);
   newCard.classList.add(...cardClasses.split(' '));
+
   cardsWrapper?.appendChild(newCard);
 });
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CustomEase);
+CustomEase.create('customBounce', '.49,1.38,.88,1');
+
+const cardsWrapperAfterAppending = document.querySelector('#cardsWrapper');
+const cardsAfterAppending = cardsWrapperAfterAppending?.children;
+const cardAnimation = gsap.timeline();
+
+cardsAfterAppending &&
+  [...cardsAfterAppending].forEach((card, index) => {
+    gsap.set(card, { y: -160 });
+
+    cardAnimation.to(card, {
+      y: 0,
+      duration: 0.3,
+    });
+
+    ScrollTrigger.create({
+      trigger: card,
+      animation: cardAnimation,
+      start: 'top 115%',
+      toggleActions: 'play none none reverse',
+    });
+  });
