@@ -68,9 +68,7 @@ const toggleShowMoreContent = (showMoreButton: Element) => {
 
 if (component instanceof Element) {
   appendComponentOnElement('Button').then(() => {
-    const showMoreButton = document?.querySelector(
-      '[data-componentName="Button"]'
-    );
+    const showMoreButton = document?.querySelector('#showMoreButton');
     if (showMoreButton) {
       showMoreButton.addEventListener('click', () => {
         toggleShowMoreContent(showMoreButton);
