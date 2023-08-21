@@ -1,0 +1,76 @@
+<div class="bg-white">
+  <div
+    class="container flex justify-between py-[2.4rem] px-[1rem] md:px-[8.9rem] md:max-h-[7.2rem]"
+  >
+    <div
+      id="giardDesignLogo"
+      class="pointer-events-none h-min w-min fill-black"
+    ></div>
+
+    <nav class="text-[1.4rem] hidden sm:flex gap-[2rem] items-center">
+      <div class="flex items-center">
+        <input
+          type="text"
+          class="border-solid border-[#111] opacity-0 w-0 line text-[1.4rem]"
+        />
+
+        <button type="button" id="search">
+          <object
+            class="pointer-events-none"
+            data="../src/assets/icons/search-icon.svg"
+            type="image/svg+xml"
+            aria-label="search icon"
+            role="img"
+          ></object>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="sm:hidden overflow-hidden relative">
+      <div class="relative flex gap-[2rem]">
+        <input
+          type="text"
+          class="border-solid border-[#111] opacity-0 w-0 line text-[1.4rem]"
+        />
+
+        <button type="button" id="search">
+          <object
+            class="pointer-events-none"
+            data="../src/assets/icons/search-icon.svg"
+            type="image/svg+xml"
+            aria-label="search icon"
+            role="img"
+          ></object>
+        </button>
+        <button type="button" data-button="openMobileMenu">
+          <object
+            class="pointer-events-none"
+            data="../src/assets/icons/hamburger-icon.svg"
+            type="image/svg+xml"
+            aria-label="hamburger icon"
+            role="img"
+          ></object>
+        </button>
+
+        <div
+          id="mobileMenuContainer"
+          class="fixed inset-0 bg-white py-[2.4rem] bottom-auto px-[1.5rem] translate-x-full flex flex-col items-end gap-[2rem] transition-all z-10"
+        >
+          <button type="button" data-button="closeMobileMenu">
+            <object
+              class="pointer-events-none h-min w-min"
+              data="../src/assets/icons/x-icon.svg"
+              type="image/svg+xml"
+              aria-label="close icon"
+              role="img"
+            ></object>
+          </button>
+
+          <ul class="mobileul"></ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <script type="module" src="../../../dist/components/Navbar/index.js"></script>
+</div>
